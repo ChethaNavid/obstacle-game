@@ -22,14 +22,22 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
         controller.Move(move * speed * Time.deltaTime);
 
-        // Gravity
-        velocity.y += gravity * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);
+        // Apply gravity
+        if (controller.isGrounded)
+        {
+            velocity.y = -2f; // Keep grounded with slight downward velocity
+        }
+        else
+        {
+            velocity.y += gravity * Time.deltaTime;
+        }
 
         // Jump
         if (Input.GetButtonDown("Jump") && controller.isGrounded)
         {
             velocity.y = jumpForce;
         }
+
+        controller.Move(velocity * Time.deltaTime);
     }
 }

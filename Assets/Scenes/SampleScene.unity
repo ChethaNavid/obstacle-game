@@ -299,6 +299,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4231850572428025543, guid: 9ffa239956f10124f87f5bf53de8c663, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -376,6 +380,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4231850572428025543, guid: 9ffa239956f10124f87f5bf53de8c663, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -452,6 +460,10 @@ PrefabInstance:
     - target: {fileID: 4231850572428025541, guid: 9ffa239956f10124f87f5bf53de8c663, type: 3}
       propertyPath: m_Name
       value: Sphere (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231850572428025543, guid: 9ffa239956f10124f87f5bf53de8c663, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -564,12 +576,14 @@ GameObject:
   - component: {fileID: 770766873}
   - component: {fileID: 770766872}
   - component: {fileID: 770766871}
+  - component: {fileID: 770766877}
   - component: {fileID: 770766870}
   - component: {fileID: 770766876}
   - component: {fileID: 770766875}
+  - component: {fileID: 770766878}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -718,6 +732,46 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &770766877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770766869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 733ed13258594ca47a0f6009ac1a0459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushForce: 50
+--- !u!54 &770766878
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770766869}
+  serializedVersion: 4
+  m_Mass: 5000
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &774939847
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -789,6 +843,10 @@ PrefabInstance:
     - target: {fileID: 4231850572428025541, guid: 9ffa239956f10124f87f5bf53de8c663, type: 3}
       propertyPath: m_Name
       value: Sphere (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231850572428025543, guid: 9ffa239956f10124f87f5bf53de8c663, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -972,6 +1030,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4231850572428025543, guid: 9ffa239956f10124f87f5bf53de8c663, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1058,6 +1120,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0dc6713cd8a684970933e9f8ace65650, type: 2}
+    - target: {fileID: 4416347176131427355, guid: e325f3fafa72bf042ae7e04d25607482, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4416347176131427356, guid: e325f3fafa72bf042ae7e04d25607482, type: 3}
       propertyPath: m_LocalScale.y
       value: 2
@@ -1108,6 +1174,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0dc6713cd8a684970933e9f8ace65650, type: 2}
     m_RemovedComponents:
     - {fileID: 4416347176131427359, guid: e325f3fafa72bf042ae7e04d25607482, type: 3}
+    - {fileID: 4416347176131427358, guid: e325f3fafa72bf042ae7e04d25607482, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -1489,6 +1556,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere
       objectReference: {fileID: 0}
+    - target: {fileID: 4231850572428025543, guid: 9ffa239956f10124f87f5bf53de8c663, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1658,6 +1729,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4231850572428025543, guid: 9ffa239956f10124f87f5bf53de8c663, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1734,6 +1809,10 @@ PrefabInstance:
     - target: {fileID: 4231850572428025541, guid: 9ffa239956f10124f87f5bf53de8c663, type: 3}
       propertyPath: m_Name
       value: Sphere (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231850572428025543, guid: 9ffa239956f10124f87f5bf53de8c663, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1931,6 +2010,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4467461681906247392, guid: ca6ed2abf62c4de4190dc89c83297cef, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4467461681906247393, guid: ca6ed2abf62c4de4190dc89c83297cef, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4467461681906247395, guid: ca6ed2abf62c4de4190dc89c83297cef, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2060,8 +2147,8 @@ SceneRoots:
   - {fileID: 193707531}
   - {fileID: 1126651654}
   - {fileID: 1794773261}
-  - {fileID: 987388193}
   - {fileID: 835659112}
+  - {fileID: 987388193}
   - {fileID: 1243027273}
   - {fileID: 774939847}
   - {fileID: 1563077494}

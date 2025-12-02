@@ -35,6 +35,7 @@ public class CameraSwitcher : MonoBehaviour
 
     void FPP_Control()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
@@ -47,7 +48,8 @@ public class CameraSwitcher : MonoBehaviour
 
     void TPP_OverviewFollow()
     {
-        Vector3 offset = new Vector3(0, 30f, -30f);
+        Cursor.lockState = CursorLockMode.Confined;
+        Vector3 offset = new Vector3(0, 10f, -10f);
         tppOverviewCamera.transform.position = playerBody.position + offset;
         tppOverviewCamera.transform.LookAt(playerBody);
     }
