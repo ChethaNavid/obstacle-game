@@ -10,8 +10,10 @@ public class PushObject : MonoBehaviour
     {
         if (Time.time - lastPushTime < pushCooldown) return;
 
-        Rigidbody rb = hit.collider.attachedRigidbody;
+        // Skip if it's a wall
+        if (hit.collider.CompareTag("wall")) return;
 
+        Rigidbody rb = hit.collider.attachedRigidbody;
         if (rb != null && !rb.isKinematic)
         {
             Vector3 pushDir = hit.moveDirection;
